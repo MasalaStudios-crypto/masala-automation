@@ -1,0 +1,37 @@
+{
+  "name": "masala-automation",
+  "version": "1.0.0",
+  "description": "Automated client filtering and LinkedIn research system for Masala Studios",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "scrape": "node src/scrapers/linkedin-scraper.js",
+    "filter": "node src/filters/client-filter.js",
+    "enrich": "node src/enrichment/company-enricher.js",
+    "export": "node src/exporters/sheets-exporter.js"
+  },
+  "keywords": [
+    "linkedin",
+    "scraping",
+    "automation",
+    "client-filtering",
+    "lead-generation"
+  ],
+  "author": "Masala Studios",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.8.0",
+    "googleapis": "^131.0.0",
+    "dotenv": "^16.4.0",
+    "csv-parser": "^3.0.0",
+    "json2csv": "^6.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "eslint": "^8.56.0"
+  }
+}
